@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Basic groups (optional) -->
+        <record id="group_todo_user" model="res.groups">
+            <field name="name">ToDo / User</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+
+
+        <record id="group_todo_manager" model="res.groups">
+            <field name="name">ToDo / Manager</field>
+            <field name="implied_ids" eval="[(4, ref('group_todo_user'))]"/>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+    </data>
+</odoo>
